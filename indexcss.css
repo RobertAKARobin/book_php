@@ -140,7 +140,8 @@ position:absolute;
 p,li,dt,
 small,aside,figcaption,pre
 {
-margin:.8em auto;
+margin-top:.8em;
+margin-bottom:.8em;
 }
 p,ul,dl,ol
 {
@@ -156,33 +157,28 @@ font-style:normal;
 padding-left:.5em;
 padding-right:.5em;
 }
-aside
-{
-padding:.5em 1em;
-margin:0 1em;
-}
-small,figcaption,pre,blockquote
+small,figcaption,pre,aside,blockquote
 {
 display:block;
-width:75%;
-margin:0 auto;
-padding:.5em 1em;
+margin:0 1em;
+padding:0 1em;
 }
-small,aside,figcaption,pre
+small,figcaption,pre,aside
 {
 text-align:center;
 font-size:0.7em;
 line-height:1.2em;
 border:1px solid #ddd;
 }
-figure
-{
-border-width:0 1px;
-}
 aside
 {
+padding:.5em 1em;
 border-radius:2em;
 border-width:0 3px;
+}
+blockquote
+{
+text-align:justify;
 }
 pre
 {
@@ -190,10 +186,7 @@ border-width:1px 0;
 text-align:left;
 white-space:pre-wrap;
 }
-blockquote
-{
-text-align:justify;
-}
+
 .example
 {
 padding:0 1em;
