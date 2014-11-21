@@ -1,0 +1,37 @@
+<p>You style in a language called <dfn>CSS</dfn>, which is completely different from HTML. You can see it in that <code>style="text-decoration:underline;"</code> bit before. CSS can do <strong>all kinds of things</strong>. It can make elements big, small, blink, shadowed, change color when you hover over them, and much, much more.</p>
+
+<p>Let's say I wanted all of my <code>div</code> elements to be underlined. You've seen one way to do that already:</p>
+
+<pre>
+&lt;div style="text-decoration:underline;"&gt;<span style="text-decoration:underline">Hamlet's Soliloquoy, by Bill Shakespeare.</span>&lt;/div&gt;
+
+&lt;div style="text-decoration:underline;"&gt;<span style="text-decoration:underline">To be, or not to be: that is the question.</span>&lt;/div&gt;
+</pre>
+
+<p>If I have a lot of <code>div</code> elements, writing <code>"text-decoration:underline;"</code> in all of them is going to be a huge pain. Plus, if I decide I don't want them underlined I'd have to go through and delete every occurrence of <code>"text-decoration:underline;"</code></p>
+
+<p>Fortunately, CSS lets us use <dfn>stylesheets</dfn>. ('CSS' stands for <q>Cascading Style Sheets</q>) A stylesheet looks like this:</p>
+
+<pre>&lt;style&gt;
+div
+{
+text-decoration:underline;
+}
+&lt;/style&gt;</pre>
+
+<p>This takes <strong>every</strong> <code>div</code> element and underlines it. Now I only need to change one piece of code to change the style of every <code>div</code>.</p>
+
+<p>The <code>div</code> is called a CSS <dfn>selector</dfn> because it <em>selects</em> to which elements the CSS <dfn>rules</dfn> are being applied. A <em>rule</em> consists of a <dfn>property</dfn> and a <dfn>value</dfn>. In this case there's only one selector with one rule, but you can have any number. The format's always the same:</p>
+
+<pre>&lt;style&gt;
+selector1
+{
+property-a:value-w;
+property-b:value-x;
+}
+selector2
+{
+property-c:value-y;
+property-d:value-z;
+}
+&lt;/style&gt;</pre>

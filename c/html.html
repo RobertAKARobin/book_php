@@ -1,0 +1,34 @@
+<p>HTML divides content into semantic <dfn>elements</dfn> (chunks). Each element begins and ends with a <dfn>tag</dfn>, like <code>&lt;div&gt;blah blah&lt;/div&gt;</code>. <dfn>div</dfn> elements are the most frequently-used HTML element, with "div" just standing for "division," as in <q>a division of content.</q></p>
+
+<p>Let's say I have this text:</p>
+
+<pre>
+Hamlet's Soliloquoy, by Bill Shakespeare. To be, or not to be: that is the question.
+</pre>
+
+<p>That pretty clearly contains two chunks with different meanings: there's a <dfn>header</dfn> &mdash; something that introduces a section of content &mdash; and then the main content.</p>
+
+<pre>
+&lt;header&gt;Hamlet's Soliloquoy, by Bill Shakespeare.&lt;/header&gt;
+
+&lt;main&gt;To be, or not to be: that is the question.&lt;/main&gt;
+</pre>
+
+<p>HTML's "grammar" is simple:</p>
+
+<dl class="ol">
+<dt>Every element needs to be closed.</dt>
+<dd>It needs a beginning tag and an end tag. Otherwise your web browser doesn't know where an element ends and you <span class="big">get <span>stuff <span>like <span>this.</span></span></span></span></dd>
+<dt>Elements have to nest.</dt>
+<dd>...just like directories and files.<br />This is wrong: <code>&lt;div&gt; &lt;strong&gt; &lt;/div&gt; &lt;/strong&gt;</code>.<br />This is right: <code>&lt;div&gt; &lt;strong&gt; &lt;/strong&gt; &lt;/div&gt;</code>.</dd>
+</dl>
+
+<p>Beyond that, HTML is just figuring out what tags to use when.</p>
+
+<p>You might have noticed one goofy tag in there: <code>&lt;img /&gt;</code>. That's called a <dfn>self-closing tag</dfn> and there are only three or four of them. They indicate elements that can't have any text content and therefore don't need both a start and end tag to show the boundaries of the content.</p>
+
+<p><code>&lt;img&gt;For example, this&lt;/img&gt;</code> would tell your web browser <q>this bit of text is an image,</q> and that doesn't make any sense.</p>
+
+<p><code>&lt;!--Blah--&gt;</code></p>
+
+<p><code>&lt;!DOCTYPE html&gt;</code></p>

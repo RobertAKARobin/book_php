@@ -1,0 +1,552 @@
+body
+{
+font-family: Georgia,Times,"Times New Roman",serif;
+}
+main a,
+code,pre,
+.match>*:nth-child(2),
+table
+{
+font-family: "Courier New",Courier,"Lucida Sans Typewriter","Lucida Typewriter",monospace;
+}
+h1,h2,h3,h4,h5,h6,dt
+{
+font-family: Verdana,Geneva,sans-serif;
+}
+.asdf
+{
+display:block;
+position:absolute;
+width:1px;
+height:1px;
+opacity:0.01;	
+}
+
+*
+{
+margin:0;
+border:0;
+padding:0;
+border-collapse:collapse;
+border-spacing:0;
+font-weight:inherit;
+font-size:inherit;
+font-style:inherit;
+color:inherit;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+font-family:inherit;
+}
+*:focus
+{
+outline:0;
+}
+html,body
+{
+width:100%;
+position:relative;
+}
+html
+{
+font-size:18px;
+line-height:1.5em;
+font-weight:normal;
+font-style:normal;
+background-color:#fff;
+}
+body
+{
+margin:0 auto;
+counter-reset:page;
+}
+section,header
+{
+position:relative;
+width:100%;
+height:auto;
+padding:2em;
+overflow:scroll;
+border:0px dotted #ddd;
+border-radius:1em;
+border-bottom-width:1px;
+}
+section:after,
+section:nth-child(odd):after
+{
+top:2%;
+left:auto;
+right:4%;
+bottom:auto;
+}
+
+section:after
+{
+counter-increment:page;
+content:counter(page);
+position:absolute;
+}
+
+
+@media only screen and (min-width:801px)
+{
+	html
+	{
+	font-size:1.3vw;
+	}
+    section,header
+    {
+	height:65vw;
+	width:50vw;
+    float:left;
+    }
+    section:nth-child(odd)
+    {
+    border-left-width:1px;
+    }
+    section:after
+    {
+	top:auto;
+    left:4%;
+	right:auto;
+    bottom:2%;
+    }
+    section:nth-child(odd):after
+    {
+	top:auto;
+    left:auto;
+	right:4%;
+    bottom:2%;
+    }
+}
+
+
+@media print
+{
+    section,header
+    {
+	border:0;
+	padding:0;
+    page-break-after:always;
+    }
+    .noprint
+    {
+    display:none;
+    }
+}
+
+
+
+p,li,dt,
+small,aside,figcaption,pre
+{
+margin:.8em auto;
+}
+p,ul,dl,ol
+{
+text-align:justify;
+}
+section>p
+{
+text-indent:1em;
+}
+code,main a
+{
+font-style:normal;
+padding-left:.5em;
+padding-right:.5em;
+}
+aside
+{
+padding:.5em 1em;
+margin:0 1em;
+}
+small,figcaption,pre,blockquote
+{
+display:block;
+width:75%;
+margin:0 auto;
+padding:.5em 1em;
+}
+small,aside,figcaption,pre
+{
+text-align:center;
+font-size:0.7em;
+line-height:1.2em;
+border:1px solid #ddd;
+}
+figure
+{
+border-width:0 1px;
+}
+aside
+{
+border-radius:2em;
+border-width:0 3px;
+}
+pre
+{
+border-width:1px 0;
+text-align:left;
+white-space:pre-wrap;
+}
+blockquote
+{
+text-align:justify;
+}
+.example
+{
+padding:0 1em;
+border:1px dashed black;
+border-radius:2em;
+clear:both;
+}
+dfn
+{
+font-weight:bold;
+border-bottom:1px dashed #ccc;
+}
+code
+{
+border-bottom:1px dashed #ccc;
+}
+pre code,
+code dfn
+{
+border:0;
+padding:0;
+}
+em
+{
+border-bottom:1px solid #ccc;
+}
+em,
+aside,
+q,
+blockquote,
+figcaption,
+small
+{
+font-style:italic;
+}
+em em,
+aside em,
+q em,
+q q,
+blockquote em,
+small em
+{
+font-style:normal;
+}
+q:before,
+blockquote:before
+{
+content:"\201c";
+}
+q:after,
+blockquote:after
+{
+content:"\201d";
+}
+q q:before
+{
+content:"\2018";
+}
+q q:after
+{
+content:"\2019";
+}
+strong
+{
+font-weight:bold;
+}
+h1,h2,h3,h4,h5,h6
+{
+font-weight:bold;
+text-align:center;
+margin:.5em 0;
+clear:both;
+}
+h1
+{
+font-size:4em;
+line-height:1em;
+}
+h2
+{
+text-decoration:underline;
+}
+h3
+{
+margin:1em 0;
+}
+
+
+
+ol
+{
+padding-left:2em;
+}
+dl
+{
+padding-left:2em;
+}
+dt
+{
+font-weight:bold;
+margin-bottom:0;
+}
+dt:not(:first-of-type)
+{
+border-top:1px dashed #ccc;
+padding-top:.5em;
+}
+.ol dt
+{
+display:list-item;
+list-style:decimal outside;
+}
+
+
+
+nav ol
+{
+padding:0;
+margin:0;
+}
+nav ol ol
+{
+padding-left:1em;
+margin-bottom:.5em;
+}
+nav li
+{
+list-style-position:inside;
+margin:0;
+}
+nav a
+{
+display:block;
+}
+nav a:hover
+{
+background-color:#eee;
+}
+
+
+
+form,button
+{
+border-radius:2px;
+overflow:hidden;
+}
+form>*:last-child
+{
+border:0;
+}
+input,textarea,button
+{
+display:block;
+line-height:1.6em;
+padding:0 .5em;
+margin-bottom:2px;
+width:100%;
+resize:none;
+background-color:#eee;
+}
+::-webkit-input-placeholder{color:#555}
+:-moz-placeholder{color:#555}
+::-moz-placeholder{color:#555}
+:-ms-input-placeholder{color:#555}
+textarea
+{
+height:3.2em;
+}
+input[type=checkbox],
+input[type=radio],
+input[type=file]
+{
+width:1px;
+height:1px;
+overflow:hidden;
+position:absolute;
+top:0px;
+left:0px;
+opacity:0.01;
+}
+*[type=submit],
+*[type=button]
+{
+cursor:pointer;
+}
+*[type=submit]:not(:disabled):hover,
+*[type=button]:not(:disabled):hover
+{
+background-color:#666;
+color:#fff;
+}
+:disabled
+{
+color:#ccc;
+cursor:default;	
+}
+.result
+{
+color:blue;	
+}
+
+
+
+.nav table
+{
+width:100%;
+margin:auto;
+border-top:1px solid black;
+}
+.nav td
+{
+width:20%;
+font-size:0.6em;
+text-align:right;
+vertical-align:top;
+padding-left:1em;
+padding-right:1em;
+border:1px solid #ddd;
+border-width:0 1px;
+border-bottom:1px solid black;
+}
+.nav td:last-of-type
+{
+border-bottom-right-radius:1em;
+}
+
+.fillin li
+{
+margin:1em auto;
+font-weight:bold;
+border-bottom:1px solid black;
+}
+.fillin li:before
+{
+content:"\2026";
+}
+.fillin li:after
+{
+content:":";
+}
+.fillin code
+{
+font-size:0.6em;
+float:right;
+border:0;
+}
+
+.match
+{
+font-size:0.8em;
+text-align:left;
+margin:0;
+padding:0;
+}
+.match ol
+{
+max-width:60%;
+}
+.match>*
+{
+display:inline-block;
+vertical-align:top;
+}
+.match li
+{
+width:100%;
+position:relative;
+margin:.5em auto;
+list-style-type:none;
+line-height:1em;
+padding:.2em .5em;
+border-radius:1em;
+border:1px dashed #ccc;
+border-width:0 1px 1px 0;
+text-align:left;
+}
+.match>*:nth-child(1)
+{
+}
+.match>*:nth-child(2)
+{
+float:right;
+text-align:center;
+}
+.match>ol:nth-child(1) li
+{
+list-style-type:decimal;
+text-align:left;
+}
+.blanks
+{
+width:100%;
+font-size:inherit;
+font-size:0.8em;
+line-height:inherit;
+border:0;
+margin:0;
+padding:0;
+}
+.blanks span
+{
+display:inline-block;
+width:3em;
+height:1em;
+overflow:visible;
+border-bottom:1px dotted black;
+position:relative;
+margin:0 1.2em;
+}
+.blanks span:before
+{
+position:absolute;
+left:-1em;
+}
+.blanks span:after
+{
+position:absolute;
+right:-1em;
+}
+.blanks .open:before
+{
+content:"<";
+}
+.blanks .closed:before
+{
+content:"</";
+}
+.blanks .open:after,
+.blanks .closed:after
+{
+content:">";
+}
+.blanks .amp:before
+{
+content:"&";
+}
+.blanks .amp:after
+{
+content:";";
+}
+
+
+header p
+{
+text-align:center;
+}
+
+
+nav a,
+h2 a
+{
+font-family:inherit;
+font-size:inherit;
+text-decoration:inherit;
+color:inherit;	   
+}

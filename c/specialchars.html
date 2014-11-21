@@ -1,0 +1,38 @@
+<p>Not every keyboard in the world has the same letters. For example, on PCs you type accented characters (like <dfn>&eacute;</dfn>) completely differently from how you would on a Mac. So if you write a website including an &eacute; on a PC, it might show up all garbled on a Mac. HTML lets you prevent this from happening to the most commonly-used <dfn>special characters</dfn> by writing them a certain way: an ampersand(&amp;), followed by an abbreviation, followed by a semicolon.</p>
+
+<h3>Draw lines matching the special characters to their HTML codes!</h3>
+<div class="match">
+<?php
+
+$chars = new csv("
+mdash
+amp
+iexcl
+iquest
+ldquo
+rdquo
+copy
+trade
+lt
+gt
+frac12
+pi
+divide
+ne
+cent
+larr
+rarr
+eacute
+ntilde
+hearts
+");
+echo $chars->toColumns("<ol>","</ol>",function($line){
+    return array(
+        "<li>&".$line[0].";</li>",
+        "<li>&amp;".$line[0].";</li>"
+    );
+});
+?>
+</div>
+
+<p>Extra credit: There are <em>lots</em> of special characters beyond these. To use them, you'll need to know their <dfn>Unicode</dfn> value. For example, <code>&amp;&num;x250C;(&amp;&num;x0CA0;_&amp;&num;x0CA0;)&amp;&num;x2518;</code> makes this sweet illustration of how I look when I dance: &#x250C;( &#x0CA0;_&#x0CA0;)&#x2518;</p>

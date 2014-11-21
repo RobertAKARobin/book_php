@@ -1,0 +1,351 @@
+Overview
+    What is a website under the hood?
+    How does it work?
+    How do you set one up?
+    How do you write one?
+        HTML/CSS
+    Touch on JS and PHP
+    
+    CMS vs coding from scratch
+
+What is a website?
+    A folder, just like you'd find on your computer
+        Contains folders (directories) and files
+    *
+        Open robertgfthomas.com in FZ
+        
+    To "own" a website, you need two things
+        A domain
+            Like www.google.com
+        ...and a server
+    
+    How websites work
+        Will Smith lives at 123 Bel-Air Ave
+            Send letter to 123 Bel-Air ave
+                "Hey, I want the script for Fresh Prince of Bel-Air"
+                Whoever's at 123 Bel-Air Ave gets address
+                Sends me the text of Fresh Prince
+        Website:
+            Lives at www.123belairavenue.com/freshprince.txt
+            Your computer sends request to www.willsmith.com
+                "Hey, send me whatever's at freshprince.txt"
+                A computer at the address gets the message
+                Sends back freshprince.txt
+        Server
+            Computer's called a server because it "serves" content to you
+            Whoever controls the server at your site's address is your Host
+                Using your own computer is self-hosting
+                What Will Smith is doing when receiving letters and filling orders
+        What if he goes on vacation?
+            Or you tell all your friends about this sweet script
+                Now he's getting more orders than he can fill
+            Will moves and turns 123 Bel-Air Ave into a factory
+                (In real life easier to just change address, but bear with me)
+        Server
+            No longer self-hosting
+            Set up computers especially for receiving and sending web requests
+            Hosting is cheap
+                I don't know anyone who self-hosts
+    
+    Upload to a website
+        Two methods:
+            FTP
+            Online editors
+        FTP
+            File transfer protocol
+            Usually an app that sits on your computer
+            Drag-and-drop
+    *
+        robertgfthomas.com/blah.jpg doesn't exist
+        Drag and drop it
+        Now it exists
+        
+    Online editor
+        What people are probably used to
+    *
+        robertgfthomas.com/blah.txt doesn't exist
+        Create file at Inmotionhosting and write something
+        Now it exists
+
+    Index
+        Will Smith
+            If you just send an envelope to 123 Bel-Air, he won't know what to send you
+                So if you don't know what scripts are available, you're out of luck
+            What would be REALLY nice is a catalogue of scripts
+                Send an envelope, he sends you a catalogue of what's available
+        On website:
+            If you just go to facebook.com you won't see anyone's profile
+                Need to specify facebook.com/robertgfthomas
+            Fortunately, Facebook gives you a way of getting there
+        Websites have indexes
+            The "main page" of a website
+            It's called an Index
+                Purpose is to give you a way of navigating to all of the different pages on site
+        Servers expect every directory to have an index
+            Looks for something called "index.html"
+            So essential it won't even usually show "index.html" in URL
+    *
+        Show robertgfthomas.com
+        Show robertgfthomas.com/index.html
+            Same thing
+            
+            Indexes so important that if you haven't made one, server will make one for you
+    *
+        Show robertgfthomas.com/anatomyofawebsite/class online
+        Shows default index
+        Change welcome.html to "index.html"
+        Reload
+        
+        Conclusion: first page you make on site should probably be index.html
+
+        
+Actually making a site
+    Local files
+        In this class a lot of what I show isn't online
+        When you're testing a site, you can just drag and drop it onto your web browser
+    *
+        Drag and drop welcome.html
+
+        Super convenient!
+        Can tell it's local because of file:/// in URL, instead of HTTP
+            HTTP (hypertext transfer protocol) is what computers and servers use to talk to each other
+            If someone tries to open file:/// URL their computer will just within itself
+
+    What application used to make site?
+        A plain text editor
+            Notepad on Windows, TextEdit on Mac, lots of others available
+            If you see lots of bolding or different sizes or fonts that aren't ugly, probably rich text
+
+    *
+        Compare welcome.docx to welcome.html
+        Drag and drop welcome.html onto Chrome
+            Looks heinous
+        Open as plain text
+            Looks heinous
+            
+    All you need to make a site is a plain text editor and a web browser
+        Why I do everything in HTML now
+        
+Writing a site
+    Will Smith
+        Want to do your own production of Fresh Prince
+            He sent you a script for Fresh Prince
+    *
+        Open belair.txt in Chrome
+        
+        Missing a lot of meaning. You can see the words, but they're just words
+            Scripts need stage directions, intonation directions, etc
+            
+    Websites are written in HTML, which does that
+        Hypertext Markup Language
+    ??
+        What does "markup" mean?
+            When you mark up a paper, you're writing comments or instructions
+                Not changing content of paper itself
+                
+    What HTML looks like
+    *
+        Open blank.html
+            (Ignore blank.css)
+
+        Made of "elements"
+            An element is a box that tells you what's inside it
+            Has two walls, or tags: open and close tag
+    *
+        <html> tag
+            Means "everything inside this is HTML"
+        <body> tag
+            Everything that shows up on your page
+        <head> tag
+            Stuff that doesn't show up on the page itself
+            <title>
+                What shows up in your bookmarks bar
+                Or on Google searches
+
+        You use it to distinguish bits of content from each other
+    *
+        <div> tags in blank.html
+        
+        Now you can style things
+    *
+        "style" attribute
+            What's an attribute?
+                Something you put inside a tag that affects it somehow
+            Make top <div> tag look like a header
+        
+        Two rules of HTML:
+            1. Elements have to be closed
+    *
+        http://www.sewingandembroiderywarehouse.com/embtrb.htm
+        
+            2. Elements have to be completely contained within another element
+                An element can have multiple children, but only one parent
+    *
+        Un-nest some <div>s on blank.html
+
+        With that in mind, we can start making an actual site
+    *
+        Add divs and content
+        
+    Standard tags
+        What if I want every other element to be red?
+            Clearly kind of a pain to just use divs all the time and style individually
+        HTML provides lots of standard tags besides <div>
+        Sectioning tags
+            <header>
+            <main>
+            <footer>
+        Grouping tags
+            <p>
+            <blockquote>
+    ?
+        How to make all paragraphs red?
+            Just style the <main> element
+    ?
+        But what if I want paragraphs red and blockquotes blue?
+        
+        Stylesheet
+            Define the rules for a bunch of elements all at once
+            Inside the <head> tag
+                Won't show up directly on page, but will affect page
+            1. Selector: what elements you want to select
+            2. Properties: how you want to style the elements
+    *
+        Make all <p> red and all <blockquote> blue
+        
+        Can get really fancy
+    *
+        p:nth-of-type = red
+        
+        LOTS of other standard tags
+    ***
+        Add in <link rel="stylesheet" href="blank.css" />
+        
+        You DON'T need to memorize tags
+            References available EVERYWHERE
+            Like learning Spanish, except
+                Grammar's simpler
+                You can use the dictionary all the time without feeling awkward
+        Semantics
+            Tags themselves don't add styles to your content
+                No <red> tag
+            Form follows function
+                Style usually reflects the purpose of the words
+                    Probably want all paragraphs to look one way, and all headers to look another way
+                Semantics
+                    Meaning of words
+    *            
+        Go through worksheet
+        
+    ?
+        <header> vs <head> vs <h1>,<h2>,<h3>...
+            All totally different
+
+    ?
+        Why does <br /> look different?
+        
+        Special characters
+            Use < and > as examples
+
+    *
+        Fresh Prince activity
+        
+Standards
+    *
+        Take away Belair CSS
+        
+    So many bad websites that web browsers now just add in their own styling to make stuff look presentable, in case the designer didn't include any CSS
+        You can't rely on this
+            Browsers use different fonts, put different borders on things, etc
+            ESPECIALLY old browsers, mobile browsers, and Internet Explorer
+                Why everyone hates IE
+                "Browser compatiblity" is a time-suck
+    If you want something to look a certain way, you must specify it in CSS
+        
+        
+Beyond HTML/CSS
+    Reiterate Spanish:
+        Seems like we just touched on it?
+        It's like a language with really simple grammar
+        No-one will judge you for using a dictionary
+            EVERYONE uses the dictionary
+        Want to make a <p> tag red?
+            Just Google "how to make p tag red"
+
+    HTML and CSS are client-side languages
+        Means they give your computer instructions
+    *
+        Will Smith's script
+            HTML is like stage/acting directions
+            CSS is like costumes
+            
+        Javascript also client-side
+            Used for actions:
+                If this happens, then that happens
+    *
+        Show js.html examples
+        
+        Great for styling, bad for security
+            Can see all the JS on someone's site
+            Wouldn't want people to see how you read passwords
+            
+    Server-side languages
+        Will Smith's script
+            When he gets your order, he saves your credit card information so you don't need to send it again
+            Not something he's telling you to do -- he's doing it on his end
+            
+        Server-side scripts
+            Doing stuff on the server
+                Changing content before it gets to your computer
+                Saving information about you
+                
+    *
+        Show index.php
+            Looks like HTML, right?
+        Show worksheet.php
+            All this stuff happens before the server sends you the HTML
+        
+        Other languages
+            Ruby, Python, blah blah blah
+            
+
+
+WWW subdomain
+Absolute vs relative
+
+
+In Stratford-on-Avon, born and raised,
+In the theater is where I spent most of my days,
+Acting,
+Casting,
+Redacting, old-school,
+And I was in London writing up Falstaff, the fool,
+When my playhouse's landlord got up to no good
+So I tore down the building and reused the wood
+From that one little fight was born the Globe Theater
+And that's how I became the Master of Metre
+
+
+
+In Eastern Denmark I was born and raised,
+But in Wittenberg's where I spent most of my days
+Reading
+Exceeding
+In my schoolwork, and all
+And I was with a couple guys up on the castle wall
+When a scary old ghost -- he looked like my dad --
+Confirmed that he'd been murdered like I thought he had
+Against the rotten old king I started to plot
+And ask myself the question, "To be, or not?"
+
+
+In Eastern Denmark, born and raised
+Sick at heart's how I spent most of my days
+Soliloquizing
+Elegizing
+Despising it all
+I was shooting the breeze up on the castle wall
+With a couple of guys -- when I heard from a ghost
+That my father had been poisoned and that's why he's toast
+It took just one little haunt and I started to plot
+And ask myself the question, "To be, or not?"

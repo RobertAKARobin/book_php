@@ -1,0 +1,53 @@
+<h3>The Washington DC metro area has been turned into a directory tree!</h3>
+
+<div class="nav">
+<?php
+$_nav = new json('
+{
+    "metro_area/":{
+        "dc/":{
+            "columbia_heights/":
+                "rachel.html",
+            "national_mall/":{
+                "memorials/":[
+                    "lincoln.html",
+                    "washington.html"
+                    ],
+                "barack.jpg":
+                    ""
+            },
+            "georgetown/":
+                "chad.png"
+        },
+        "maryland/":{
+            "bethesda/":
+                "arielle.html"
+        },
+        "virginia/":{
+            "arlington/":{
+                "rosslyn/":
+                    "nadia.jpg"
+            },
+            "crystal_city/":
+                "techshop.html"
+        }
+    }
+}
+');
+
+$_nav->toRows(null);
+$_nav->fillRows("&nbsp;");
+echo $_nav->toTable();
+
+?>
+</div>
+
+<h3>Write the directions...</h3>
+
+<ol class="fillin">
+<li>to Lincoln<code>metro_area/dc/national_mall/memorials/lincoln.html</code></li>
+<li>from Lincoln to Chad<code>../../georgetown/chad.png</code></li>
+<li>from Chad to Arielle</li>
+<li>from Arielle to Nadia</li>
+<li>from Nadia to Rachel</li>
+</ol>

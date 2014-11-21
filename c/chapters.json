@@ -1,0 +1,38 @@
+{
+    "Intro":{
+        "me":"Hello!",
+        "reasons":"What I'm going for with this book",
+        "mantras":"Things to repeat to yourself"
+    },
+    "How websites work":{
+        "websites":"What a website actually is",
+        "http":"HTTP: How computers talk to each other",
+        "urls":"URL: The fancy word for 'address'",
+        "indexes":"Indexes: How people get around your site",
+        "directories":"Directory: The fancy word for 'folder'",
+        "navigation":"Navigation: Challenge",
+        "ips":"IP Addresses: The Internet's phone numbers"
+    },
+    "Setting up your own website":{
+        "domains":"Domains: Getting your own .com",
+        "hosts":"Hosts: Letting people see your .com",
+        "buyhosting":"How to buy hosting",
+        "uploading":"Uploading: Putting stuff online",
+        "plaintext":"Plain-text editors: You don't need any fancy software",
+        "local":"Local files: You don't even need the Internet"
+    },
+    "Learning the language":{
+        "semantics":"Semantics: What it means",
+        "html":"HTML: Your webpage's stage directions",
+        "tags":"HTML Tags: Challenge",
+        "style":"Style: How your HTML looks",
+        "css":"CSS: The 's' is for 'style'",
+        "semanticsvsstyle":"Semantics vs Style: HTML and CSS don't mix",
+        "specialchars":"Special characters: Challenge",
+        "colors":"Colors: Challenge"
+    },
+    "Other stuff you should know":{
+    	"caching":"Caching: Makes things go faster",
+    	"images":"Embedding: Stuff that isn't text"
+    }
+}
