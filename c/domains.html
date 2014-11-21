@@ -1,15 +1,9 @@
-<p>You don't really <em>own</em> a domain, you sort-of <em>lease</em> it. You're the only one who can use it until your lease expires, which usually takes a year unless you renew it.</p>
+<p>Every machine connected to the Internet has its own "phone number," called an <dfn>IP address</dfn>. Your computer has one. So does the computer that runs my website (my <em>server</em>). To view my website, people need that number. But <code>216.194.168.37</code> is hard to remember, so instead I tell people my website's <dfn>domain</dfn>, <code>robertakarobin.com</code>, which is easier to remember. This is sort-of like how Will's phone number is actually <code>976-4841</code>, but he tells people to dial <code>WSMITH-1</code>.</p>
 
-<p>Any un-leased domain can be bought from any <em>registrar</em>, like <code>IWantMyName&#46;com</code> or <code>GoDaddy&#46;com</code>. They're usually less than $20 each. You can buy as many as you want.</p>
+<p>When you enter <code>robertakarobin.com</code> in your web browser, that <em>request</em> is sent to a special computer called a <dfn>nameserver</dfn>. Its job is to look up a domain's IP address in the same way you'd look up Will Smith's phone number: by searching the phone book for <q>Will Smith.</q> The nameserver looks through a bunch of records, sees that <code>robertakarobin.com</code> has the IP address <code>216.194.168.37</code>, and then tells your computer to send its request there. This all happens under-the-hood.</p>
 
-<aside>
-<p>Domains are <em>so</em> cheap that it's really easy to hoard them. I'll come across some catchy word or phrase and think, <q>I should totally make a website named that,</q> and buy the domain. The result is I have a couple dozen domains collecting dust.</p>
-</aside>
+<p>So <code>WSMITH-1</code> is to <code>976-4841</code> as a domain is to an IP address in that it keeps people from having to remember a huge number.</p>
 
-<p>Phone numbers have area codes. Domains have <dfn>top-level domains</dfn> (TLDs) like <code>.com</code>. Neither really does anything. My area code is for southwestern Ohio but I haven't lived there in 7 years. <code>.com</code> is short for <q>company</q> but lots of .coms have nothing to do with business.</p>
+<p>Will Smith is to <code>976-4841</code> as a domain is to an IP address in that he "owns" that huge number and is connected to people through it.</p>
 
-<p>A few TLDs are restricted, like <code>.gov</code>, which can only be used by the government. The rest don't have rules. I live in the USA but could buy a <code>.ru</code> domain (short for 'Russia') and write the whole thing in Chinese.</p>
-
-<p>There used to be just a few TLDs. Now there's a ton, from <code>.in</code> for India and <code>.es</code> for Spain, to <code>.attorney</code>, <code>.pink</code>, and <code>.sexy</code>. These might be cheaper than <code>.com</code> but will make your website's URL harder to remember. Many businesses choose their names by which <code>.com</code> domains are available.</p>
-
-<aside><p>You might be thinking, <q>Hey, I should buy a bunch of cheap domains, wait for people to want to buy them from me, and sell them at a high price!</q> That's called <em>domain squatting.</em> It's sneaky, sleazy, not worth it, and sucks for everyone else.</p></aside>
+<p>This Internet "phone book" is called the <dfn>DNS</dfn> (Domain Name System). When you set up a website the DNS is updated to show what IP address belongs to your domain. That update is sent to (or "propogated among") all the nameservers in the world. This lets people view your website without having to memorize your IP address.</p>

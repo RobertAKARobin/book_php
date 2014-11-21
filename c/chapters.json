@@ -6,17 +6,15 @@
     },
     "How websites work":{
         "websites":"What a website actually is",
-        "http":"HTTP: How computers talk to each other",
+        "domains":"Domain: Your website's phone number",
+        "domainbuy":"Owning a domain",
         "urls":"URL: The fancy word for 'address'",
+        "hosts":"Hosts: Letting people see your .com",
+        "http":"HTTP: How computers talk to each other",
         "indexes":"Indexes: How people get around your site",
         "directories":"Directory: The fancy word for 'folder'",
         "navigation":"Navigation: Challenge",
-        "ips":"IP Addresses: The Internet's phone numbers"
-    },
-    "Setting up your own website":{
-        "domains":"Domains: Getting your own .com",
-        "hosts":"Hosts: Letting people see your .com",
-        "buyhosting":"How to buy hosting",
+        "hostbuy":"How to buy hosting",
         "uploading":"Uploading: Putting stuff online",
         "plaintext":"Plain-text editors: You don't need any fancy software",
         "local":"Local files: You don't even need the Internet"
