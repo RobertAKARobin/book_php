@@ -353,10 +353,23 @@ And ask myself the question, "To be, or not?"
 
 
 Will's written a new rap, but has a cold and can't perform it. Needs someone else to do it.
-Will wants someone to write a biography about his life.
 Will wants someone to turn his life story into a book.
 Will wants someone to turn his life story into a website.
+book
+    -Already all written down
+website
+play
+painting
+music video
+TV show, but TV hasn't been invented yet
+    -Headers etc?
 
--Multiple people requesting the information
--Will/Will's secretary are separating it into semantic chunks
+-Multiple people request the information
+-Will/Will's secretary separate it into semantic chunks
 -Information is all in the same "voice", w/ same narrator
+-Has headers
+
+magazine
+website
+book
+picture book

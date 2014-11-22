@@ -1,5 +1,7 @@
 <?php
 
+require "phpmailer/PHPMailerAutoload.php";
+
 function rgb($hex){
     $r = hexdec(substr($hex,0,2));
     $g = hexdec(substr($hex,2,2));
@@ -215,38 +217,6 @@ class error extends Exception{
 }
 
 class success extends Exception{
-}
-
-
-function email($to,$subject,$content){
-	$myEmail = "hello@robertakarobin.com";
-	
-	require "phpmailer/PHPMailerAutoload.php";
-	if(empty($to)) $to = $myEmail;
-	if(!$content = sanitize($content)) throw new error("You didn't include a message!");
-	if(strlen($content) < 20) throw new error("Could you make your message more than 20 characters?");
-	if(!filter_var($to, FILTER_VALIDATE_EMAIL)) throw new error("This e-mail address seems odd.");
-	
-	$mail = new PHPMailer;
-	$mail->isSMTP();
-	$mail->Host = "secure139.inmotionhosting.com";
-	$mail->Username = $myEmail;
-	$mail->Password = "Bingoball1!";
-	$mail->SMTPAuth = true;
-	$mail->SMTPSecure = "ssl";
-	$mail->Port = "465";
-	$mail->isHTML(false);
-	$mail->ContentType = "text/plain";
-	$mail->WordWrap = 0;
-	$mail->From = $myEmail;
-	$mail->addCC( $myEmail );
-	$mail->FromName = "Robert AKA Robin Thomas";
-	$mail->addAddress($to);
-	$mail->Subject = $subject;
-	$mail->Body = sanitize($content);
-	
-	if(!$mail->send()) throw new error("The message didn't go through. :( Try e-mailing me directly!");
-    else return true;
 }
 
 function dirTree($dir){

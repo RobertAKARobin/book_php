@@ -1,9 +1,0 @@
-<p>Every machine connected to the Internet has its own "phone number," called an <dfn>IP address</dfn>. Your computer has one. So does the computer that runs my website (my <em>server</em>). To view my website, people need that number. But <code>216.194.168.37</code> is hard to remember, so instead I tell people my website's <dfn>domain</dfn>, <code>robertakarobin.com</code>, which is easier to remember. This is sort-of like how Will's phone number is actually <code>976-4841</code>, but he tells people to dial <code>WSMITH-1</code>.</p>
-
-<p>When you enter <code>robertakarobin.com</code> in your web browser, that <em>request</em> is sent to a special computer called a <dfn>nameserver</dfn>. Its job is to look up a domain's IP address in the same way you'd look up Will Smith's phone number: by searching the phone book for <q>Will Smith.</q> The nameserver looks through a bunch of records, sees that <code>robertakarobin.com</code> has the IP address <code>216.194.168.37</code>, and then tells your computer to send its request there. This all happens under-the-hood.</p>
-
-<p>So <code>WSMITH-1</code> is to <code>976-4841</code> as a domain is to an IP address in that it keeps people from having to remember a huge number.</p>
-
-<p>Will Smith is to <code>976-4841</code> as a domain is to an IP address in that he "owns" that huge number and is connected to people through it.</p>
-
-<p>This Internet "phone book" is called the <dfn>DNS</dfn> (Domain Name System). When you set up a website the DNS is updated to show what IP address belongs to your domain. That update is sent to (or "propogated among") all the nameservers in the world. This lets people view your website without having to memorize your IP address.</p>

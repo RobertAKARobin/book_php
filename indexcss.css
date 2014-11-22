@@ -138,7 +138,7 @@ position:absolute;
 
 
 p,li,dt,
-small,aside,figcaption,pre
+small,figure,pre,aside,hr
 {
 margin-top:.8em;
 margin-bottom:.8em;
@@ -157,18 +157,24 @@ font-style:normal;
 padding-left:.5em;
 padding-right:.5em;
 }
-small,figcaption,pre,aside,blockquote
+small,figure,pre,aside,blockquote
 {
 display:block;
-margin:0 1em;
 padding:0 1em;
 }
-small,figcaption,pre,aside
+small,figure,pre,aside,hr
+{
+border:1px solid #ddd;
+line-height:1.2em;
+}
+small,figcaption,aside
 {
 text-align:center;
 font-size:0.7em;
-line-height:1.2em;
-border:1px solid #ddd;
+}
+figure,pre
+{
+border-width:1px 0;
 }
 aside
 {
@@ -182,9 +188,12 @@ text-align:justify;
 }
 pre
 {
-border-width:1px 0;
-text-align:left;
 white-space:pre-wrap;
+}
+hr
+{
+border:0px dotted #ddd;
+border-top-width:1px;
 }
 
 .example
@@ -209,16 +218,13 @@ code dfn
 border:0;
 padding:0;
 }
-em
-{
-border-bottom:1px solid #ccc;
-}
 em,
 aside,
 q,
 blockquote,
 figcaption,
-small
+small,
+i
 {
 font-style:italic;
 }
@@ -230,6 +236,10 @@ blockquote em,
 small em
 {
 font-style:normal;
+}
+i
+{
+border-bottom:1px solid #ccc;
 }
 q:before,
 blockquote:before
