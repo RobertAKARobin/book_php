@@ -1,7 +1,7 @@
 {
     "Intro":{
-        "me":"Hello!",
-        "reasons":"What I'm going for with this book",
+        "intro":"Hello!",
+        "reasons":"My hopes for this book",
         "mantras":"Things to repeat to yourself"
     },
     "How websites work":{

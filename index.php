@@ -20,9 +20,9 @@
 <h1>Learn web design without a computer</h1>
 <p><button type="button" onclick="window.print();">Print the whole thing!</button></p>
 <div class="noprint">
-<p>I'm working on this every day until it's perfect! </p>
+<p>What's confusing? Poorly-designed? Completely left out?</p>
 <form id="email" action="email.php" target="emailFrame" method="post" enctype="multipart/form-data">
-<textarea name="message" placeholder="Please write feedback here!"></textarea>
+<textarea name="message" placeholder="Write your feedback here!"></textarea>
 <input type="text" name="email" placeholder="Your e-mail address (Optional)" />
 <input type="submit" value="Click to submit!" />
 </form>
