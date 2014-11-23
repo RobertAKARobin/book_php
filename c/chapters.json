@@ -2,7 +2,8 @@
     "Intro":{
         "intro":"Hello!",
         "reasons":"My hopes for this book",
-        "mantras":"Things to repeat to yourself"
+        "mantras":"Things to repeat to yourself",
+        "prologue":"Prologue"
     },
     "How websites work":{
         "websites":"What a website actually is",
