@@ -39,22 +39,4 @@ $("form").each(function(){
     });
 });
 
-$("#colors ol:nth-of-type(1) li").each(function(){
-    var hex = $(this).prop("title"),
-        rgb = hex.match(/(.{1,2})/g),
-        txt = "fff",
-        color,
-        bg;
-    for(var x in rgb){ rgb[x] = parseInt(rgb[x], 16); }
-    if(
-        rgb[0] > 255
-      ||rgb[1] > 130
-      ||rgb[2] > 255
-      ){
-        txt = "000";
-    }
-    $(this).css("background-color", "#"+hex);
-    $(this).find("span").css("color", "#"+txt);
-});
-
 });

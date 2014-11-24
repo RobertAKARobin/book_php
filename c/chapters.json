@@ -3,34 +3,34 @@
         "intro":"Hello!",
         "reasons":"My hopes for this book",
         "mantras":"Things to repeat to yourself",
-        "prologue":"Prologue"
+        "poem":null
     },
     "How websites work":{
-        "websites":"What a website actually is",
-        "domain":"Domain: Your website's phone number",
-        "domain_buy":"Owning a domain",
-        "urls":"URL: The fancy word for 'address'",
-        "host":"Hosts: Letting people see your .com",
-        "http":"HTTP: How computers talk to each other",
-        "indexes":"Indexes: How people get around your site",
-        "directories":"Directory: The fancy word for 'folder'",
-        "navigation":"Navigation: Challenge",
-        "host_buy":"Hosting: How to buy it",
-        "uploading":"Uploading: Putting stuff online",
-        "plaintext":"Plain-text editors: You don't need any fancy software",
-        "local":"Local files: You don't even need the Internet"
+        "websites":["Websites","What they really are"],
+        "domain":["Domains","A website's phone number"],
+        "domain_buy":["Domains","How to get your own"],
+        "urls":["URL","The fancy word for 'address'"],
+        "host":["Hosts","Where websites are kept"],
+        "host_buy":["Hosts","How to buy one"],
+        "http":["HTTP","How computers talk to each other"],
+        "indexes":["Indexes","How people get around your site"],
+        "directories":["Directory","The fancy word for 'folder'"],
+        "challenge_nav":["Navigation","Challenge"],
+        "uploading":["Uploading","Putting stuff on your site"],
+        "plaintext":["Plain-text","How you write your site's code"],
+        "local":["Local browsing","You don't need the Internet"]
     },
     "HTML and CSS: Learning the language":{
-        "html_joke":"HTML: How to tell your computer a joke",
-        "html_semantics":"Chunking your webpage",
+        "html_joke":["HTML","How to tell your computer a joke"],
+        "html_semantics":["Semantics","Chunking your webpage"],
         "html_tags":"HTML Tags",
         "html_thepoint":"What's the point?",
-        "html_challenge":"Challenge!",
+        "challenge_html":"Challenge!",
         "style":"Style: How your HTML looks",
         "css":"CSS: The 's' is for 'style'",
         "semanticsvsstyle":"Semantics vs Style: HTML and CSS don't mix",
-        "specialchars":"Special characters: Challenge",
-        "colors":"Colors: Challenge"
+        "challenge_chars":"Special characters: Challenge",
+        "challenge_colors":"Colors: Challenge"
     },
     "Other stuff you should know":{
     	"caching":"Caching: Makes things go faster",

@@ -3,7 +3,7 @@
 <p><dfn>Hexadecimal</dfn> (or <dfn>hex</dfn>) integers have 16 possible values, letting you get up to 255 in 2 characters. Hex uses the first 6 letters of the alphabet, A-F, to represent the numbers 10-15. So 0 is <code>00</code>, 15 is <code>0F</code>, 16 is <code>10</code>, 160 is <code>A0</code>, and 255 is <code>FF</code>.</p>
 
 <h3>Draw lines matching the colors to their hexadecimal values!</h3>
-<div class="match">
+<div class="match" id="colors">
 <?php
 $colors = new csv("
 000000,black
@@ -19,17 +19,26 @@ FF8000,orange
 008080,teal
 804000,brown
 ");
-echo $colors->toColumns("<ol class=\"inside\" style=\"min-width:10em;\">","</ol>",function($line){
+echo $colors->toColumns("<ol class=\"inside\">","</ol>",function($line){
     $hex = $line[0];
     $name = $line[1];
+    $txt = "fff";
+    $rgb = str_split($hex,2);
+    if(
+        hexdec($rgb[0]) > 255
+      ||hexdec($rgb[1]) > 130
+      ||hexdec($rgb[2]) > 255
+      ){
+        $txt = "000";
+    }
     $cola = <<<EOF
-<li title="$hex"><span>$name</span></li>
+<li style="background-color:#$hex;"><span style="color:#$txt;">$name</span></li>
 EOF;
-    $colb = "<li>&num;$hex</li>";
+    $colb = "<li>&#35;$hex</li>";
     return array($cola,$colb);
 });
 ?>
 </div>
 
-<aside>*It's green instead of yellow because computer light is "additive" whereas natural light is "subtractive." I don't really know what that means, but it's science.</aside>
+<div class="aside">*It's green instead of yellow because computer light is "additive" whereas natural light is "subtractive." I don't really know what that means, but it's science.</div>
 <p>Extra credit: What colors can you make from words using only hex characters? For example, <code>0ff1ce</code> is sea green, <code>beaded</code> is soft purple, <code>c0ffee</code> is a very light blue, <code>defec8</code> is kind of a pastel yellow-green.</p>

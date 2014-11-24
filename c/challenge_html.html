@@ -23,7 +23,7 @@ A definition,dd
 A division of the page,div
 A brief span of text,span
 ");
-echo $tags->toColumns("<ol class=\"inside\">","</ol>",function($line){
+echo $tags->toColumns("<ol>","</ol>",function($line){
     $cola = $line[0];
     $colb = $line[1];
     return array(
