@@ -140,6 +140,7 @@ line-height:1.2em;
 {
 padding:.5em 1em;
 border-radius:2em;
+border:3px solid #ddd;
 border-width:0 3px;
 text-align:center;
 font-size:0.7em;
@@ -305,7 +306,6 @@ list-style-type:none;
 #contents li li
 {
 margin:0;
-text-indent:2em;
 }
 #contents span
 {
