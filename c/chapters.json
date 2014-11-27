@@ -1,28 +1,29 @@
 {
     "Intro":{
         "intro":"Hello!",
-        "reasons":"My hopes for this book",
+        "reasons":"Things I want this book to be",
         "mantras":"Things to repeat to yourself",
-        "poem":null
+        "prologue":"The story so far"
     },
     "How websites work":{
-        "websites":["Websites","What they really are"],
-        "domain":["Domains","A website's phone number"],
-        "domain_buy":["Domains","How to get your own"],
+        "websites":["Websites","In a nutshell"],
+        "domain":["Domains","Sort-of a website's phone number"],
+        "domain_buy":["Domains","Getting your own .com"],
         "urls":["URL","The fancy word for 'address'"],
         "host":["Hosts","Where websites are kept"],
-        "host_buy":["Hosts","How to buy one"],
+        "host_buy":["Hosts","How to get hosted"],
         "http":["HTTP","How computers talk to each other"],
+        "http_error":["HTTP","404: Page not found"],
         "indexes":["Indexes","How people get around your site"],
         "directories":["Directory","The fancy word for 'folder'"],
-        "challenge_nav":["Navigation","Challenge"],
+        "challenge_nav":["Navigation","Challenge!"],
         "uploading":["Uploading","Putting stuff on your site"],
-        "plaintext":["Plain-text","How you write your site's code"],
-        "local":["Local browsing","You don't need the Internet"]
+        "plaintext":["Plain text","Don't use Microsoft Word for web design"],
+        "local":["Local","You don't need the Internet"]
     },
     "HTML and CSS: Learning the language":{
-        "html_joke":["HTML","How to tell your computer a joke"],
         "html_semantics":["Semantics","Chunking your webpage"],
+        "html_joke":["HTML","How to tell your computer a joke"],
         "html_tags":"HTML Tags",
         "html_thepoint":"What's the point?",
         "challenge_html":"Challenge!",

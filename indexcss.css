@@ -2,7 +2,7 @@ body
 {
 font-family: Georgia,Times,"Times New Roman",serif;
 }
-code,pre,table
+code,pre,.nav ul
 {
 font-family: "Courier New",Courier,"Lucida Sans Typewriter","Lucida Typewriter",monospace;
 }
@@ -23,9 +23,10 @@ border-spacing:0;
 font-weight:inherit;
 font-size:inherit;
 font-style:inherit;
-color:inherit;
 font-family:inherit;
 text-decoration:inherit;
+text-align:inherit;
+color:inherit;
 }
 *:focus
 {
@@ -35,6 +36,7 @@ html,body
 {
 width:100%;
 position:relative;
+text-align:left;
 }
 html
 {
@@ -74,7 +76,7 @@ clear:both;
 }
 h1
 {
-font-size:4em;
+font-size:3em;
 line-height:1em;
 }
 h2
@@ -93,10 +95,6 @@ margin:1em 0;
 }
 h6
 {
-position:absolute;
-top:0;
-right:0;
-z-index:99;
 width:100%;
 text-align:left;
 font-size:0.8em;
@@ -114,6 +112,20 @@ text-align:right;
 
 
 
+table
+{
+width:100%;
+}
+th
+{
+font-weight:bold;
+}
+td,th
+{
+vertical-align:top;
+}
+
+
 p,li,dt,
 pre,.aside
 {
@@ -124,6 +136,22 @@ p,ul,dl,ol
 {
 text-align:justify;
 }
+ol,ul,dl
+{
+list-style-position:inside;
+}
+dt
+{
+font-weight:bold;
+margin-bottom:0;
+}
+.ol>dt
+{
+display:list-item;
+list-style-type:decimal;
+list-style-position:inside;
+}
+
 body>div>p
 {
 text-indent:1em;
@@ -135,11 +163,18 @@ padding:0 1em;
 line-height:1.2em;
 }
 
-
-.aside
+.aside,.example
 {
 padding:.5em 1em;
 border-radius:2em;
+clear:both;
+}
+.example
+{
+border:1px dashed black;
+}
+.aside
+{
 border:3px solid #ddd;
 border-width:0 3px;
 text-align:center;
@@ -153,14 +188,6 @@ blockquote
 {
 text-align:justify;
 }
-
-.example
-{
-padding:0 1em;
-border:1px dashed black;
-border-radius:2em;
-clear:both;
-}
 dfn
 {
 font-weight:bold;
@@ -172,6 +199,7 @@ font-style:normal;
 padding-left:.5em;
 padding-right:.5em;
 border-bottom:1px dashed #ccc;
+word-break:break-all;
 }
 pre code,
 code dfn
@@ -220,26 +248,6 @@ content:"\2019";
 strong
 {
 font-weight:bold;
-}
-
-
-ol
-{
-padding-left:2em;
-}
-dl
-{
-padding-left:2em;
-}
-dt
-{
-font-weight:bold;
-margin-bottom:0;
-}
-.ol dt
-{
-display:list-item;
-list-style:decimal outside;
 }
 
 
@@ -297,51 +305,38 @@ color:blue;
 }
 
 
-
-
-#contents li
+#contents th
 {
-list-style-type:none;
-}
-#contents li li
-{
-margin:0;
-}
-#contents span
-{
-display:block;
-float:left;
-width:2em;
+padding-top:1em;
 }
 #contents a
 {
 display:block;
 text-decoration:none;
 }
-#contents a:hover
+#contents tr:hover,
+#contents tr.head
 {
 background-color:#eee;
 }
 
 
 
-.nav table
+.nav li
 {
-width:100%;
-margin:auto;
-border-top:1px solid black;
+list-style-type:none;
+margin:0;
 }
-.nav td
+.nav ul
 {
-width:20%;
-font-size:0.6em;
-text-align:right;
-vertical-align:top;
-padding-left:1em;
-padding-right:1em;
-border:1px solid #ddd;
-border-width:0 1px;
-border-bottom:1px solid black;
+padding-left:.2em;
+border-left:3px solid #eee;
+border-bottom:1px solid #eee;
+margin-bottom:5px;
+}
+.nav ul ul
+{
+margin-left:1em;
 }
 
 
@@ -362,7 +357,7 @@ content:":";
 }
 .fillin code
 {
-font-size:0.6em;
+font-size:0.8em;
 float:right;
 border:0;
 }
@@ -500,6 +495,7 @@ content:";";
     }
     h6
     {
+    position:absolute;
     top:auto;
     bottom:0;
     text-align:center;

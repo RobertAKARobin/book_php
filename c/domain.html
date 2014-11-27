@@ -1,11 +1,9 @@
-<p>Every machine connected to the Internet has its own "phone number." Your computer has one. So does the computer that runs my website. To view my website, people need that number. But <code>216.194.168.37</code> is hard to remember, so instead I tell people to go to <code>robertakarobin.com</code>, which is easier to remember. This is sort-of like how Will's phone number is actually <code>976-4841</code>, but he tells people to dial <code>WSMITH-1</code>.</p>
+<p>Every machine connected to the Internet has its own "phone number," called an <dfn>IP address</dfn>. (IP stands for <q>Internet Protocol.</q>) Your personal computer has one. So does a computer running a website. If Will Smith was a website, his IP address would be <code>86.75.30.9</code>.</p>
 
-<p>That "phone number" is called an <dfn>IP address</dfn>. (IP stands for <q>Internet Protocol.</q>) <code>robertakarobin.com</code> is a <dfn>domain</dfn>.</p>
+<p>To view a website, you need its IP address. But <code>86.75.30.9</code> is hard to remember. So instead we use <dfn>domain names</dfn>, like <code>willsmith.com</code>.</p>
 
-<p>A domain is to an IP address the way <code>WSMITH-1</code> is to <code>976-4841</code> &mdash; it keeps people from having to remember a huge number &mdash; and the way Will Smith is to <code>976-4841</code> &mdash; it "owns" that number uses it to connect with people.</p>
+<p>If you look up <q>Will Smith</q> in a phone book, it will tell you Will has the phone number <code>867-5309</code>. If you look up <code>willsmith.com</code> in the Internet's "phone book" &mdash; called the <dfn>DNS</dfn> (Domain Name System) &mdash; it will tell you <code>willsmith.com</code> has the IP address <code>86.75.30.9</code>.</p>
 
-<p>When you go to <code>robertakarobin.com</code> in your web browser, that <em>request</em> is sent to a special computer called a <dfn>nameserver</dfn>. The nameserver looks up the IP address for <code>robertakarobin.com</code> in the Internet's "phone book," called the <dfn>DNS</dfn> (Domain Name System). This phone book lists <code>robertakarobin.com</code> as having the number <code>216.194.168.37</code>. So the nameserver tells your computer to send its request to <code>216.194.168.37</code>.</p>
+<p>When you dial <code>4-1-1</code> on your phone you're connected to a special system that looks up phone numbers in the phone book for you. When you enter a domain in your web browser you're connected to a special computer called a <dfn>nameserver</dfn> that looks up IP addresses in the DNS for you.</p>
 
-<div class="aside"><p>This happens so quickly and quietly that you don't even notice. If you weren't learning about web design, you might never even see an IP address.</p></div>
-
-<p>When you set up a website the DNS is updated to show what IP address belongs to your domain. That update is sent to (or <q>propogated among</q>) all the nameservers in the world.</p>
+<p>This happens so quickly and quietly that you don't even notice. If you weren't learning about web design, you could go your whole life without seeing an IP address.</p>

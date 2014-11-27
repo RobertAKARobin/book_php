@@ -13,11 +13,11 @@ $_nav = new json('
                     "lincoln.html",
                     "washington.html"
                     ],
-                "barack.jpg":
-                    ""
+                "barack.jpg":[]
             },
-            "georgetown/":
+            "georgetown/":[
                 "chad.png"
+            ]
         },
         "maryland/":{
             "bethesda/":
@@ -25,19 +25,20 @@ $_nav = new json('
         },
         "virginia/":{
             "arlington/":{
-                "rosslyn/":
+                "rosslyn/":[
                     "nadia.jpg"
+                ]
             },
-            "crystal_city/":
+            "crystal_city/":[
                 "techshop.html"
+            ]
         }
     }
 }
 ');
 
-$_nav->toRows(null);
-$_nav->fillRows("&nbsp;");
-echo $_nav->toTable();
+$_nav->toLists();
+echo($_nav->output);
 
 ?>
 </div>

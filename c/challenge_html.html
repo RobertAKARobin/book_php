@@ -4,24 +4,25 @@
 <?php
 
 $tags = new csv("
-A paragraph of text,p
-An anchor (usually known as a link),a
-An image,img /
-Text that heads the most important section on a page,h1
-Text that heads the second-most important sections on a page,h2
-Text that heads the least-important sections on a page,h6
-A short quote,q
-Emphasized text,em
-Important text (that you'd read in a loud voice),strong
-A long or very important quote,blockquote
-An unordered list,ul
-An ordered list,ol
-An item in an ordered or unordered list,li
-A list of definitions,dl
-A definition's title,dt
-A definition,dd
-A division of the page,div
-A brief span of text,span
+Paragraph,p
+Anchor (usually called a link),a
+Image,img /
+Heads the most important section on a page,h1
+Heads the second-most important sections on a page,h2
+Heads the least-important sections on a page,h6
+Short quote,q
+Long or very important quote,blockquote
+Emphasized,em
+Important (that you'd read in a loud voice),strong
+Unordered list (bullet points),ul
+Ordered list (1 2 3... A B C...),ol
+Item in an ordered or unordered list,li
+List of definitions,dl
+Definition's title,dt
+Definition,dd
+Preserve spaces and tabs in your code,pre
+Division of the page,div
+Brief span of text,span
 ");
 echo $tags->toColumns("<ol>","</ol>",function($line){
     $cola = $line[0];

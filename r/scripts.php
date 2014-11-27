@@ -117,6 +117,23 @@ class json extends dataset{
         $output[] = "</table>";
         return implode(PHP_EOL,$output);
     }
+    
+    function toLists($array = null){
+        $output = &$this->output;
+        if(is_null($array)) $array = $this->array;
+        $output .= "<ul>";
+        foreach($array as $key => $val){
+            $output .= "<li>";
+            if(is_array($val)){
+                $output .= $key;
+                if(!empty($val)) $this->toLists($val);
+            }else{
+                $output .= $val;
+            }
+            $output .= "</li>";
+        }
+        $output .= "</ul>";
+    }
 
 }
 

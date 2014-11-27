@@ -373,3 +373,7 @@ magazine
 website
 book
 picture book
+
+
+
+<p>When you set up a website the DNS is updated to show what IP address your domain is using. That update is sent to (or <q>propogated among</q>) all the nameservers in the world.</p>
