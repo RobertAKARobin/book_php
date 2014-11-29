@@ -19,22 +19,22 @@
         "challenge_nav":["Navigation","Challenge!"],
         "uploading":["Uploading","Putting stuff on your site"],
         "plaintext":["Plain text","Don't use Microsoft Word for web design"],
-        "local":["Local","You don't need the Internet"]
+        "local":["Local browsing","You don't need the Internet"]
     },
     "HTML and CSS: Learning the language":{
-        "html_semantics":["Semantics","Chunking your webpage"],
+        "html_semantics":["HTML","Movie scripts for computers"],
         "html_joke":["HTML","How to tell your computer a joke"],
         "html_tags":"HTML Tags",
         "html_thepoint":"What's the point?",
         "challenge_html":"Challenge!",
-        "style":"Style: How your HTML looks",
+        "style":["CSS","Style: How your HTML looks"],
         "css":"CSS: The 's' is for 'style'",
         "semanticsvsstyle":"Semantics vs Style: HTML and CSS don't mix",
         "challenge_chars":"Special characters: Challenge",
         "challenge_colors":"Colors: Challenge"
     },
     "Other stuff you should know":{
-    	"caching":"Caching: Makes things go faster",
-    	"images":"Embedding: Stuff that isn't text"
+    	"caching":["Caching","Makes things go faster"],
+    	"images":["Embedding","Stuff that isn't text"]
     }
 }
