@@ -85,10 +85,6 @@ position:relative;
 z-index:100;
 text-decoration:underline;
 }
-h2 span
-{
-display:block;
-}
 h3
 {
 margin:1em 0;
@@ -101,13 +97,17 @@ font-size:0.8em;
 font-style:italic;
 color:#999;
 }
-h6 span
+h6 *
 {
 font-style:normal;
 display:block;
 width:2em;
 float:right;
 text-align:right;
+}
+h6 *:hover
+{
+color:blue;
 }
 
 
@@ -305,10 +305,6 @@ color:blue;
 }
 
 
-#contents th
-{
-padding-top:1em;
-}
 #contents a
 {
 display:block;
@@ -321,22 +317,22 @@ background-color:#eee;
 }
 
 
-
 .nav li
 {
+line-height:1.2em;
 list-style-type:none;
 margin:0;
+margin-bottom:1px;
 }
 .nav ul
 {
 padding-left:.2em;
 border-left:3px solid #eee;
 border-bottom:1px solid #eee;
-margin-bottom:5px;
 }
 .nav ul ul
 {
-margin-left:1em;
+margin-left:15%;
 }
 
 
@@ -346,6 +342,7 @@ margin-left:1em;
 margin:1em auto;
 font-weight:bold;
 border-bottom:1px solid black;
+overflow:hidden;
 }
 .fillin li:before
 {
@@ -364,42 +361,36 @@ border:0;
 
 
 
-.match
-{
-font-size:0.8em;
-text-align:left;
-margin:0;
-padding:0;
-}
 .match ol
 {
-max-width:60%;
+font-size:0.8em;
 display:inline-block;
-vertical-align:top;
+line-height:1em;
+counter-reset:matches;
 }
 .match ol+ol
 {
-list-style-type:none;
 float:right;
-text-align:center;
 }
 .match li
 {
-width:100%;
-position:relative;
-margin:.5em auto;
-list-style-type:none;
-line-height:1em;
+display:block;
+margin:.5em 0;
 padding:.2em .5em;
 border-radius:1em;
 border:1px dashed #ccc;
 border-width:0 1px 1px 0;
-text-align:left;
-list-style-type:decimal;
+counter-increment:matches;
 }
-.match ol+ol li
+.match li:before
 {
-list-style-type:none;
+content:counter(matches)". ";
+display:inline-block;
+width:1.5em;
+}
+.match ol+ol li:before
+{
+content:counter(matches,lower-alpha)". ";
 }
 
 
@@ -475,11 +466,11 @@ content:";";
 
 @media only screen and (min-width:801px)
 {
-	html
+	html.h
 	{
 	font-size:1.3vw;
 	}
-    body>div
+    .h body>div
     {
 	height:77.5vw;
 	width:50vw;
@@ -489,24 +480,24 @@ content:";";
     -webkit-box-sizing:border-box;
     -moz-box-sizing:border-box;
     }
-    h2 span
+    .h h2 span
     {
     display:inline;
     }
-    h6
+    .h h6
     {
     position:absolute;
     top:auto;
     bottom:0;
     text-align:center;
     }
-    h6 span
+    .h h6 *
     {
     position:absolute;
     bottom:0;
     right:0;
     }
-    body>div:nth-of-type(odd) h6 span
+    .h body>div:nth-of-type(odd) h6 *
     {
     left:0;
     right:auto;

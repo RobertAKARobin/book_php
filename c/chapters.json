@@ -16,7 +16,7 @@
         "http_error":["HTTP","404: Page not found"],
         "indexes":["Indexes","How people get around your site"],
         "directories":["Directory","The fancy word for 'folder'"],
-        "challenge_nav":["Navigation","Challenge!"],
+        "challenge_nav":["Challenge","Navigation"],
         "uploading":["Uploading","Putting stuff on your site"],
         "plaintext":["Plain text","Don't use Microsoft Word for web design"],
         "local":["Local browsing","You don't need the Internet"]
@@ -24,13 +24,13 @@
     "HTML and CSS: Learning the language":{
         "html_semantics":["HTML","Movie scripts for computers"],
         "html_joke":["HTML","How to tell your computer a joke"],
-        "html_tags":"HTML Tags",
+        "html_tags":["HTML","Tags"],
         "html_thepoint":"What's the point?",
-        "challenge_html":"Challenge!",
+        "challenge_html":["Challenge","Tags"],
+        "challenge_chars":["Challenge","Special Characters"],
         "style":["CSS","Style: How your HTML looks"],
         "css":"CSS: The 's' is for 'style'",
-        "semanticsvsstyle":"Semantics vs Style: HTML and CSS don't mix",
-        "challenge_chars":"Special characters: Challenge",
+        "semanticsvsstyle":"HTML and CSS don't mix",
         "challenge_colors":"Colors: Challenge"
     },
     "Other stuff you should know":{

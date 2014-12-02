@@ -10,6 +10,7 @@ HTML;
 
 chdir("c");
 ob_start();
+$layout = "h";
 $chapters = json_decode(file_get_contents("chapters.json"),true);
 $pageNum = 0;
 foreach($chapters as $chapter => $sections){
@@ -28,24 +29,53 @@ HTML;
         }
         $colon = (empty($pageTopic) ? "" : ":");
         
-        $nav .= <<<HTML
+        $pageOpen = <<<HTML
+        
+<div id="$pageId">
+
+HTML;
+
+        $pageNumber = <<<HTML
+
+<h6>$chapter <a href="?print=$pageId">$pageNum</a></h6>
+
+HTML;
+        
+        $pageHeader = <<<HTML
+        
+<h2><a href="index.php#$id"><span>$pageTopic$colon</span> $pageDescription</a></h2>
+
+HTML;
+        include("$id.html");
+        $pageContent = ob_get_contents();
+        ob_clean();
+        $pageClose = <<<HTML
+        
+</div>
+
+HTML;
+
+        if($_GET["print"] == $pageId){
+            $content = $pageOpen . $pageHeader . $pageContent . $pageClose;
+            $layout = "single";
+        }else if($layout == "single"){
+            continue(2);
+        }else{
+            $content .= $pageOpen . $pageNumber . $pageHeader . $pageContent . $pageClose;
+            $nav .= <<<HTML
 
     <tr>
     <td class="num"><a href="#$pageId">$pageNum</a></td>
     <td class="topic"><a href="#$pageId">$pageTopic&nbsp;</a></td>
     <td class="desc"><a href="#$pageId">$pageDescription</a></td>
     </tr>
+
 HTML;
-        
-        $content .= <<<HTML
-    <div id="$pageId"><h6>$chapter <span>$pageNum</span></h6>
-    <h2><a href="#$id"><span>$pageTopic$colon</span> $pageDescription</a></h2>
-HTML;
-        include("$id.html");
-        $content .= ob_get_contents();
-        ob_clean();
-        $content .= "\r\n</div>\r\n\r\n";
+
+        }
+
     }
+        
 }
 ob_end_clean();
 chdir("..");
@@ -53,7 +83,7 @@ chdir("..");
 echo <<<HTML
 
 <!DOCTYPE html>
-<html>
+<html class="$layout">
 <head>
 <meta charset="utf-8" />
 <base target="_top" />
@@ -65,9 +95,13 @@ $js
 </head>
 <body>
 
+HTML;
+
+if($layout != "single") echo <<<HTML
+
 <div id="header">
 <h1>Learn web design without a computer</h1>
-<p><button type="button" onclick="window.print();">Print all $pageNum pages!</button></p>
+<p class="noprint"><button type="button" onclick="window.print();">Print all $pageNum pages!</button></p>
 <p>Something confusing? Left out? Ugly?</p>
 <p>E-mail me:</p>
 <p><a href="mailto:hello@robertakarobin.com" target="_blank">hello&#64;robertakarobin&#46;com</a></p>
@@ -81,6 +115,10 @@ $nav
 
 </table>
 </div>
+
+HTML;
+
+echo <<<HTML
 
 $content
 

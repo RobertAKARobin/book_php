@@ -3,7 +3,7 @@
 <p><dfn>Hexadecimal</dfn> (or <dfn>hex</dfn>) integers have 16 possible values, letting you get up to 255 in 2 characters. Hex uses the first 6 letters of the alphabet, A-F, to represent the numbers 10-15. So 0 is <code>00</code>, 15 is <code>0F</code>, 16 is <code>10</code>, 160 is <code>A0</code>, and 255 is <code>FF</code>.</p>
 
 <h3>Draw lines matching the colors to their hexadecimal values!</h3>
-<div class="match" id="colors">
+<div class="match">
 <?php
 $colors = new csv("
 000000,black
@@ -19,7 +19,7 @@ FF8000,orange
 008080,teal
 804000,brown
 ");
-echo $colors->toColumns("<ol class=\"inside\">","</ol>",function($line){
+echo $colors->toColumns("<ol>","</ol>",function($line){
     $hex = $line[0];
     $name = $line[1];
     $txt = "fff";
@@ -32,7 +32,7 @@ echo $colors->toColumns("<ol class=\"inside\">","</ol>",function($line){
         $txt = "000";
     }
     $cola = <<<EOF
-<li style="background-color:#$hex;"><span style="color:#$txt;">$name</span></li>
+<li style="background-color:#$hex; color:#$txt;">$name</li>
 EOF;
     $colb = "<li>&#35;$hex</li>";
     return array($cola,$colb);
