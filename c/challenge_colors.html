@@ -1,6 +1,6 @@
-<p>Every computer pixel contains three lights: one red, one green*, and one blue. To make a pixel a certain color you tell the computer how bright each light should be, from <code>000</code> (off) to <code>255</code> (full-blast). For example, blue would be <code>000,000,255</code>, purple <code>255,000,255</code>, and yellow <code>255,255,000</code>. The problem is computers only give you 2 characters to write this value, and the biggest value you can make using regular <dfn>decimal</dfn> integers (with 10 possible values, 0-9) is 99.</p>
+<p>Every computer pixel contains three lights: one red, one green*, and one blue. To make a pixel a certain color you tell the computer how bright each light should be, from <kbd>000</kbd> (off) to <kbd>255</kbd> (full-blast). For example, blue would be <kbd>000,000,255</kbd>, purple <kbd>255,000,255</kbd>, and yellow <kbd>255,255,000</kbd>. The problem is computers only give you 2 characters to write this value, and the biggest value you can make using regular <dfn>decimal</dfn> integers (with 10 possible values, 0-9) is 99.</p>
 
-<p><dfn>Hexadecimal</dfn> (or <dfn>hex</dfn>) integers have 16 possible values, letting you get up to 255 in 2 characters. Hex uses the first 6 letters of the alphabet, A-F, to represent the numbers 10-15. So 0 is <code>00</code>, 15 is <code>0F</code>, 16 is <code>10</code>, 160 is <code>A0</code>, and 255 is <code>FF</code>.</p>
+<p><dfn>Hexadecimal</dfn> (or <dfn>hex</dfn>) integers have 16 possible values, letting you get up to 255 in 2 characters. Hex uses the first 6 letters of the alphabet, A-F, to represent the numbers 10-15. So 0 is <kbd>00</kbd>, 15 is <kbd>0F</kbd>, 16 is <kbd>10</kbd>, 160 is <kbd>A0</kbd>, and 255 is <kbd>FF</kbd>.</p>
 
 <h3>Draw lines matching the colors to their hexadecimal values!</h3>
 <div class="match">
@@ -34,11 +34,11 @@ echo $colors->toColumns("<ol>","</ol>",function($line){
     $cola = <<<EOF
 <li style="background-color:#$hex; color:#$txt;">$name</li>
 EOF;
-    $colb = "<li>&#35;$hex</li>";
+    $colb = "<li><kbd>&#35;$hex</kbd></li>";
     return array($cola,$colb);
 });
 ?>
 </div>
 
 <div class="aside">*It's green instead of yellow because computer light is "additive" whereas natural light is "subtractive." I don't really know what that means, but it's science.</div>
-<p>Extra credit: What colors can you make from words using only hex characters? For example, <code>0ff1ce</code> is sea green, <code>beaded</code> is soft purple, <code>c0ffee</code> is a very light blue, <code>defec8</code> is kind of a pastel yellow-green.</p>
+<p>Extra credit: What words can you make using 6 hex characters? <kbd>0ff1ce</kbd> is sea green, <kbd>beaded</kbd> is soft purple, <kbd>c0ffee</kbd> is a very light blue, <kbd>defec8</kbd> is kind of a pastel yellow-green.</p>

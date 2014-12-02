@@ -29,10 +29,10 @@ hearts
 echo $chars->toColumns("<ol>","</ol>",function($line){
     return array(
         "<li>&".$line[0].";</li>",
-        "<li>&amp;".$line[0].";</li>"
+        "<li><kbd>&amp;".$line[0].";</kbd></li>"
     );
 });
 ?>
 </div>
 
-<p>Extra credit: There are <em>lots</em> of special characters beyond these. To use them, you'll need to know their <dfn>Unicode</dfn> value. For example, <code>&amp;&#35;x250C;(&amp;&#35;x0CA0;_&amp;&#35;x0CA0;)&amp;&#35;x2518;</code> makes this sweet illustration of how I look when I dance: &#x250C;( &#x0CA0;_&#x0CA0;)&#x2518;</p>
+<p>Extra credit: There are <em>lots</em> of special characters beyond these. To use them, you'll need to know their <dfn>Unicode</dfn> value. For example, <kbd>&amp;&#35;x250C;<wbr />(&amp;&#35;x0CA0;<wbr />_&amp;&#35;x0CA0;)<wbr />&amp;&#35;x2518;</kbd> makes this sweet illustration of how I look when I dance: &#x250C;( &#x0CA0;_&#x0CA0;)&#x2518;</p>

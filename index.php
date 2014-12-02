@@ -37,7 +37,7 @@ HTML;
 
         $pageNumber = <<<HTML
 
-<h6>$chapter <a href="?print=$pageId">$pageNum</a></h6>
+<h6><a href="?print=$pageId">$pageNum</a> $chapter</h6>
 
 HTML;
         
@@ -52,6 +52,7 @@ HTML;
         $pageClose = <<<HTML
         
 </div>
+<hr />
 
 HTML;
 

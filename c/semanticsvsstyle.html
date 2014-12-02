@@ -1,19 +1,19 @@
-<p>There are several elements besides <code>&lt;div&gt;</code>, each with a unique semantic value. For instance, <code>&lt;strong&gt;</code> indicates important text that would be read in a <strong>strong</strong> voice. <code>&lt;em&gt;</code> indicates text that would be read with <strong>emphasis</strong>. <code>&lt;div&gt;</code> is what you use when none of the other tags seems to fit.</p>
+<p>There are several elements besides <kbd>&lt;div&gt;</kbd>, each with a unique semantic value. For instance, <kbd>&lt;strong&gt;</kbd> indicates important text that would be read in a <strong>strong</strong> voice. <kbd>&lt;em&gt;</kbd> indicates text that would be read with <strong>emphasis</strong>. <kbd>&lt;div&gt;</kbd> is what you use when none of the other tags seems to fit.</p>
 
 <p>The biggest rule in web design is that <dfn>semantics and style should be separate</dfn>. You should use HTML just to define the semantic value of stuff, and CSS just to define the stylistic value.</p>
 
-<p>A couple reasons HTML tags are based on semantics, rather than offering tags like <code>&lt;bold&gt;</code> or <code>&lt;underline&gt;</code> or <code>&lt;orange&gt;</code>:</p>
+<p>A couple reasons HTML tags are based on semantics, rather than offering tags like <kbd>&lt;bold&gt;</kbd> or <kbd>&lt;underline&gt;</kbd> or <kbd>&lt;orange&gt;</kbd>:</p>
 
 <dl class="ol">
 <dt>Form follows function</dt>
 <dd>The style of an element almost always depends on its semantic value. It's much more likely that you'd want every header to be underlined than everything that's underlined to be a header.</dd>
 
 <dt>Learnability</dt>
-<dd>Let's say <code>&lt;orange&gt;</code> is a tag. What if you want to use a few different shades of orange? What tags would you use? We'd need to have a tag for every color, which would result in HTML having about a gazillion tags.</dd>
+<dd>Let's say <kbd>&lt;orange&gt;</kbd> is a tag. What if you want to use a few different shades of orange? What tags would you use? We'd need to have a tag for every color, which would result in HTML having about a gazillion tags.</dd>
 
 <dt>Accessibility</dt>
 <dd><p>Defining semantics is even more important when people don't understand your words. If someone who doesn't speak any English saw <em>Hamlet</em> in English, the only way they'll be able to figure out what anyone's saying is by listening for semantic cues: Is something being yelled? Sobbed? Whispered?</p>
-<p>If a blind person is reading your site in Braille &mdash; which happens more often than you'd think &mdash; an <code>&lt;orange&gt;</code> tag wouldn't be very useful. A <code>&lt;strong&gt;</code> tag would be much better at helping them figure out what you're trying to communicate.</p></dd>
+<p>If a blind person is reading your site in Braille &mdash; which happens more often than you'd think &mdash; an <kbd>&lt;orange&gt;</kbd> tag wouldn't be very useful. A <kbd>&lt;strong&gt;</kbd> tag would be much better at helping them figure out what you're trying to communicate.</p></dd>
 
 <dt>Manageability</dt>
 <dd>Stylesheets let you change the styles for all of one type of element in one line of code. They also make it easy to try different themes on a page. For instance, if you're not sure whether you want your webpage's color scheme to be dark or light you can make one stylesheet for each and just swap them out &mdash; no need to touch your HTML.</dd>
@@ -22,4 +22,4 @@
 <dd>We'll see in a bit how to easily use the same stylesheet on a bunch of pages without having to do lots of copying and pasting. This means you can easily style an entire collection of webpages the exact same way.</dd>
 </dl>
 
-<div class="aside"><p>CSS didn't come along until HTML had been around for a while. Before then HTML had lots of semantic tags, like <code>&lt;b&gt;</code> for 'bold' and <code>&lt;i&gt;</code> for 'italic'. You can still see that on some sites, like the one for the 1996 movie <em>Space Jam</em>: <a href="http://www2.warnerbros.com/spacejam/movie/jam.htm">www2.warnerbros.com/spacejam/movie/jam.htm</a></p></div>
+<div class="aside"><p>CSS didn't come along until HTML had been around for a while. Before then HTML had lots of semantic tags, like <kbd>&lt;b&gt;</kbd> for 'bold' and <kbd>&lt;i&gt;</kbd> for 'italic'. You can still see that on some sites, like the one for the 1996 movie <em>Space Jam</em>: <a href="http://www2.warnerbros.com/spacejam/movie/jam.htm">www2.warnerbros.com/spacejam/movie/jam.htm</a></p></div>

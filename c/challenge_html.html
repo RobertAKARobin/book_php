@@ -29,7 +29,7 @@ echo $tags->toColumns("<ol>","</ol>",function($line){
     $colb = $line[1];
     return array(
         "<li>$cola</li>",
-        "<li>&lt;$colb&gt;</li>"
+        "<li><kbd>&lt;$colb&gt;</kbd></li>"
     );
 });
 ?>
