@@ -2,8 +2,6 @@
 
 error_reporting(E_ERROR);
 
-require "phpmailer/PHPMailerAutoload.php";
-
 function rgb($hex){
     $r = hexdec(substr($hex,0,2));
     $g = hexdec(substr($hex,2,2));

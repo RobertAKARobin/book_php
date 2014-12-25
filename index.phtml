@@ -1,4 +1,5 @@
 <?
+
 require "r/scripts.php";
 
 if($_SERVER["SERVER_NAME"] != "localhost") $js = <<<HTML
@@ -37,13 +38,13 @@ HTML;
 
         $pageNumber = <<<HTML
 
-<h6><a href="?print=$pageId">$pageNum</a> $chapter</h6>
+<a class="footer" href="?printable=$pageId"><span class="pagenum">$pageNum</span> <span class="chapter">$chapter</span></a>
 
 HTML;
         
         $pageHeader = <<<HTML
         
-<h2><a href="index.php#$id"><span>$pageTopic$colon</span> $pageDescription</a></h2>
+<h2><a  href="index.phtml#$id"><span>$pageTopic$colon</span> $pageDescription</a></h2>
 
 HTML;
         include("$id.html");
@@ -56,7 +57,7 @@ HTML;
 
 HTML;
 
-        if($_GET["print"] == $pageId){
+        if($_GET["printable"] == $pageId){
             $content = $pageOpen . $pageHeader . $pageContent . $pageClose;
             $layout = "single";
         }else if($layout == "single"){
@@ -101,15 +102,15 @@ HTML;
 if($layout != "single") echo <<<HTML
 
 <div id="header">
-<h1>Learn web design without a computer</h1>
+<h1>Learn web design in two hours without a com&shy;puter</h1>
 <p class="noprint"><button type="button" onclick="window.print();">Print all $pageNum pages!</button></p>
 <p>Something confusing? Left out? Ugly?</p>
 <p>E-mail me:</p>
 <p><a href="mailto:hello@robertakarobin.com" target="_blank">hello&#64;robertakarobin&#46;com</a></p>
 </div>
 
-<div id="contents">
-<h2>Table of Contents</h2>
+<div id="index">
+<h2>Index</h2>
 <table>
 
 $nav

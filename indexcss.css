@@ -54,6 +54,7 @@ body>div
 {
 position:relative;
 height:auto;
+overflow:hidden;
 border-style:solid;
 border-color:transparent;
 border-width:2em 2em 1px 2em;
@@ -76,7 +77,7 @@ clear:both;
 }
 h1
 {
-font-size:3em;
+font-size:4em;
 line-height:1em;
 }
 h2
@@ -89,15 +90,16 @@ h3
 {
 margin:1em 0;
 }
-h6
+.footer
 {
+display:block;
 width:100%;
 text-align:left;
 font-size:0.8em;
 font-style:italic;
 color:#999;
 }
-h6 *
+.pagenum
 {
 font-style:normal;
 display:block;
@@ -105,9 +107,9 @@ width:2em;
 float:right;
 text-align:right;
 }
-h6 *:hover
+.footer:hover
 {
-color:blue;
+color:black;
 }
 
 
@@ -127,12 +129,14 @@ vertical-align:top;
 
 
 p,li,dt,
-pre,.aside
+pre,.aside,
+blockquote
 {
 margin-top:.8em;
 margin-bottom:.8em;
 }
-p,ul,dl,ol
+p,ul,dl,ol,
+blockquote
 {
 text-align:justify;
 }
@@ -145,18 +149,21 @@ dt
 font-weight:bold;
 margin-bottom:0;
 }
-.ol>dt
+.ol
 {
-display:list-item;
-list-style-type:decimal;
-list-style-position:inside;
+counter-reset: counter;
+}
+.ol>dt:before
+{
+counter-increment: counter;
+content: counter(counter) ". ";
 }
 
 body>div>p
 {
 text-indent:1em;
 }
-pre,.aside,blockquote
+pre,.aside
 {
 display:block;
 padding:0 1em;
@@ -183,10 +190,6 @@ font-size:0.7em;
 pre
 {
 white-space:pre-wrap;
-}
-blockquote
-{
-text-align:justify;
 }
 dfn
 {
@@ -307,13 +310,13 @@ color:blue;
 }
 
 
-#contents a
+#index a
 {
 display:block;
 text-decoration:none;
 }
-#contents tr:hover,
-#contents tr.head
+#index tr:hover,
+#index tr.head
 {
 background-color:#eee;
 }
@@ -461,6 +464,12 @@ content:";";
 
 
 
+wbr
+{
+display:inline-block;
+}
+
+
 @media print
 {
     body>div
@@ -486,7 +495,6 @@ content:";";
     {
 	height:77.5vw;
 	width:50vw;
-	overflow:scroll;
     float:left;
     box-sizing:border-box;
     -webkit-box-sizing:border-box;
@@ -496,20 +504,20 @@ content:";";
     {
     display:inline;
     }
-    .h h6
+    .h .footer
     {
     position:absolute;
     top:auto;
     bottom:0;
     text-align:center;
     }
-    .h h6 *
+    .h .pagenum
     {
     position:absolute;
     bottom:0;
     right:0;
     }
-    .h body>div:nth-of-type(odd) h6 *
+    .h body>div:nth-of-type(odd) .pagenum
     {
     left:0;
     right:auto;
