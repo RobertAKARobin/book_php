@@ -16,7 +16,7 @@ $chapters = json_decode(file_get_contents("chapters.json"),true);
 $pageNum = 0;
 foreach($chapters as $chapter => $sections){
     $nav .= <<<HTML
-    <tr class="head"><th colspan="3">$chapter</th></tr>
+    <tr class="head"><th colspan="2">$chapter</th></tr>
 HTML;
     foreach($sections as $id => $title){
         $pageNum++;
@@ -44,7 +44,7 @@ HTML;
         
         $pageHeader = <<<HTML
         
-<h2><a  href="index.phtml#$id"><span>$pageTopic$colon</span> $pageDescription</a></h2>
+<h2><a  href="index.phtml#$id"><!--<span>$pageTopic$colon</span> -->$pageDescription</a></h2>
 
 HTML;
         include("$id.html");
@@ -68,7 +68,7 @@ HTML;
 
     <tr>
     <td class="num"><a href="#$pageId">$pageNum</a></td>
-    <td class="topic"><a href="#$pageId">$pageTopic&nbsp;</a></td>
+<!--    <td class="topic"><a href="#$pageId">$pageTopic&nbsp;</a></td>-->
     <td class="desc"><a href="#$pageId">$pageDescription</a></td>
     </tr>
 

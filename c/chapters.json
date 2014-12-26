@@ -5,21 +5,19 @@
         "mantras":"Things to repeat to yourself",
         "prologue":"The story so far"
     },
-    "How websites work":{
-        "websites":["Websites","In a nutshell"],
-        "domain":["Domains","Sort-of a website's phone number"],
-        "domain_buy":["Domains","Getting your own .com"],
-        "urls":["URL","The fancy word for 'address'"],
-        "host":["Hosts","Where websites are kept"],
-        "host_buy":["Hosts","How to get hosted"],
-        "http":["HTTP","How computers talk to each other"],
-        "http_error":["HTTP","404: Page not found"],
-        "indexes":["Indexes","How people get around your site"],
-        "directories":["Directory","The fancy word for 'folder'"],
-        "challenge_nav":["Challenge","Navigation"],
-        "uploading":["Uploading","Putting stuff on your site"],
-        "plaintext":["Plain text","Don't use Microsoft Word for web design"],
-        "local":["Local browsing","You don't need the Internet"]
+    "What a website is and how you get one":{
+        "websites":["Websites","In a nutshell..."],
+        "domain":["Domains","Domains are like phone numbers without phones"],
+        "domain_buy":["Domains","Domains are cheap"],
+        "host":["Hosts","Hosts are like phones"],
+        "host_buy":["Hosts","Hosting is cheap too"],
+        "http":["HTTP","HTTP is how computers talk to each other"],
+        "http_error":["HTTP","'404' is a kind of HTTP error"],
+        "urls":["URL","'URL' is a fancy word for 'address'"],
+        "directories":["Directory","'Directory' is a fancy word for 'folder'"],
+        "indexes":["Indexes","Indexes get people around your site"],
+        "challenge_nav":["Challenge","How to write a URL"],
+        "uploading":["Uploading","Putting stuff on your site"]
     },
     "HTML and CSS: Learning the language":{
         "html_semantics":["HTML","TV scripts for computers"],
@@ -32,6 +30,10 @@
         "css":"CSS: The 's' is for 'style'",
         "semanticsvsstyle":"HTML and CSS don't mix",
         "challenge_colors":"Colors: Challenge"
+    },
+    "Writing and editing your website":{
+        "software":["","The software you need to make a website"],
+        "local":["","Looking at your website without the Internet"]
     },
     "Other stuff you should know":{
     	"caching":["Caching","Makes things go faster"],
