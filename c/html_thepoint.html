@@ -1,7 +1,29 @@
-<p>The way you <dfn>style</dfn> text depends on its <i>semantics</i> &mdash; that is, the way text looks depends on what it means.</p>
+<p><dfn>HTML</dfn> stands for <i>Hypertext Markup Language</i>. It's a version of another language called <i>XML</i>.</p>
 
-<p>If I'm writing a book of awful jokes, I might want it to look like this:</p>
+<pre><?php $html = <<<HTML
+<address>
+    <name>
+        <first>Will</first>
+        <last>Smith</last>
+    </name>
+    <street>123 Bel-Air Avenue</street>
+    <city>Bel-Air</city>
+    <state>CA</state>
+    <zip>94305</zip>
+</address>
+HTML;
 
+echo toHtml($html);
+?>
+</pre>
 
+<p>All of these markup languages look really similar, and they're all about giving meaning to words. If a teacher <q>marks up</q> a student's essay, they're not changing the students words. They're adding a new layer of <i>semantic value</i> <em>on top</em> of the student's words by writing comments and suggestions: <q>This should be a new paragraph,</q> <q>This is great!</q> <q>This is a really interesting topic.</q></p>
 
-<p></p>
+<p>XML and HTML only have a couple rules: you need to close every element (give it an "end" tag), and elements have to <i>nest</i>, just like files and directories.</p>
+
+<code>&lt;tag1&gt;This is &lt;tag2&gt;wrong&lt;/tag1&gt;.&lt;/tag2&gt;
+&lt;tag3&gt;This is &lt;tag4&gt;right&lt;/tag4&gt;.&lt;/tag3&gt;</code>
+
+<p>Markup languages also ignore <i>whitespace</i>, like spaces, tabs, and returns. If your code has a bunch of whitespace in a row, it'll show up in a web browser as just one space. Something <kbd>like            this</kbd> would show up <i>like this</i>.</p>
+
+<p>This is nice because it means you can organize your code however is easiest for you to read. Write it all on one line, or space it out with tabs and indentations the way I did above &mdash; no-one but you will know.</p>

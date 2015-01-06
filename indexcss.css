@@ -128,8 +128,16 @@ vertical-align:top;
 }
 
 
+body>div hr
+{
+width:50%;
+margin:0 auto;
+border-bottom:1px dotted #ddd;
+}
+
+
 p,li,dt,
-pre,.aside,
+pre,code,.aside,
 blockquote
 {
 margin-top:.8em;
@@ -163,16 +171,15 @@ body>div>p
 {
 text-indent:1em;
 }
-pre,.aside
+pre,.aside,.example
 {
 display:block;
-padding:0 1em;
+padding:.5em 1em;
 line-height:1.2em;
 }
 
 .aside,.example
 {
-padding:.5em 1em;
 border-radius:2em;
 clear:both;
 }
@@ -187,25 +194,26 @@ border-width:0 3px;
 text-align:center;
 font-size:0.7em;
 }
-pre
-{
-white-space:pre-wrap;
-}
 dfn
 {
 font-weight:bold;
 border-bottom:1px dashed #ccc;
 }
-code,kbd
+pre,code,kbd
 {
-font-style:normal;
+white-space:pre-wrap;
+}
+pre
+{
+border-top:1px dashed #ccc;
+}
+pre,kbd
+{
 border-bottom:1px dashed #ccc;
 }
 code
 {
 display:block;
-white-space:pre-wrap;
-border-top:1px dashed #ccc;
 }
 kbd
 {

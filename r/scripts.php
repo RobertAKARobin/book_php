@@ -259,4 +259,8 @@ function chapters($input,$out){
     return $output;
 }
 
+function toHtml($input){
+    return htmlspecialchars($input);
+}
+
 ?>

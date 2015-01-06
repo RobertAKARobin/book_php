@@ -6,7 +6,9 @@
         "prologue":"The story so far"
     },
     "What a website is and how you get one":{
-        "websites":["Websites","In a nutshell..."],
+        "websites":"Webpages are like TV shows",
+        "backend":"It's OK to giggle at \"back-end\"",
+        "languages":"HTML is for meaning, CSS is for style",
         "domain":["Domains","Domains are like phone numbers without phones"],
         "domain_buy":["Domains","Domains are cheap"],
         "host":["Hosts","Hosts are like phones"],
@@ -20,10 +22,9 @@
         "uploading":["Uploading","Putting stuff on your site"]
     },
     "HTML and CSS: Learning the language":{
-        "html_semantics":["HTML","TV scripts for computers"],
-        "html_joke":["HTML","How to tell your computer a joke"],
+        "html_semantics":["HTML","HTML: A TV script for your computer"],
+        "html_thepoint":"What's the point of HTML?",
         "html_tags":["HTML","Tags"],
-        "html_thepoint":"What's the point?",
         "challenge_html":["Challenge","Tags"],
         "challenge_chars":["Challenge","Special Characters"],
         "style":["CSS","Style: How your HTML looks"],
